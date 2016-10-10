@@ -6,10 +6,42 @@
 //  Copyright © 2016 COMP130. All rights reserved.
 //
 
-#include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+# define prog 1
+
+#if(prog == 1)
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    
+    cout << "Future Investment Value \n";
+    
+    // Initialize data storage
+    double i = 0.0, apr = 0.0;
+    int y = 0.0;
+    double fiv = 0.0;
+    
+    // Input
+    cout << "Enter the investment amount: ";
+    cin >> i;
+    cout << "Enter the interest rate percentage: ";
+    cin >> apr;
+    cout << "Enter the number of years: ";
+    cin >> y;
+    
+    // Processing
+    fiv = i * pow((1 + ((apr/100) / 12.0)),(y * 12));
+    
+    // Output
+    cout << "Accumulated value is $" << fiv << endl;
+    
+    
     return 0;
 }
+
+#elif(prog == 2)
+
+#endif
