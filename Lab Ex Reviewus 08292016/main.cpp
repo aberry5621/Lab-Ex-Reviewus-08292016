@@ -7,7 +7,7 @@
 //
 
 
-# define prog 1
+# define prog 2
 
 #if(prog == 1)
 
@@ -43,5 +43,34 @@ int main() {
 }
 
 #elif(prog == 2)
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    
+    cout << "The Sum Of All Digits \n";
+    
+    // Initialize data storage
+    int input = 0, sum = 0;
+    
+    // Input
+    cout << "Enter a digit between 0 - 1000: ";
+    cin >> input;
+    
+    // Processing
+    sum += input % 10;
+    input = input / 10;
+    sum += input % 10;
+    input = input / 10;
+    sum += input % 10;
+    input = input / 10;
+    
+    // Output
+    cout << "SUM: " << sum << endl;
+    
+    return 0;
+}
 
 #endif
